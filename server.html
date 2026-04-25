@@ -37,6 +37,7 @@
 
     <main>
       <section class="section container pricing-hero">
+        <a class="back-link" href="index.html" id="back-home">← Back to Home</a>
         <p class="eyebrow">⟢ ENLIGHTEN COMMUNITY ⟣</p>
         <h1 class="section-title glow-text">Blox Fruits Service Price List</h1>
         <p class="hero-subtitle">Updated pricing for raids, grinding, and specialized services.</p>
@@ -191,6 +192,14 @@
         const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', String(!expanded));
         navMenu.classList.toggle('open');
+      });
+
+      const backHome = document.getElementById('back-home');
+      backHome?.addEventListener('click', (event) => {
+        if (window.history.length > 1) {
+          event.preventDefault();
+          window.history.back();
+        }
       });
 
       document.getElementById('year').textContent = new Date().getFullYear();

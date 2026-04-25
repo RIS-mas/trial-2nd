@@ -141,6 +141,20 @@ body {
   text-transform: uppercase;
 }
 
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  transition: transform var(--transition), text-shadow var(--transition);
+}
+
+.back-link:hover {
+  transform: translateX(-2px);
+  text-shadow: var(--shadow-glow);
+}
+
 .btn-glow {
   display: inline-block;
   text-decoration: none;
