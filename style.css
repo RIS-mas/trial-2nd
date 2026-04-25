@@ -134,6 +134,13 @@ body {
   margin-bottom: 1.4rem;
 }
 
+.eyebrow {
+  color: var(--accent-soft);
+  letter-spacing: 1px;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
 .btn-glow {
   display: inline-block;
   text-decoration: none;
@@ -162,10 +169,11 @@ body {
 
 .cards-grid,
 .features-grid,
-.pricing-grid {
+.pricing-grid,
+.price-list-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .glass {
@@ -217,27 +225,40 @@ body {
   padding-top: 4.2rem;
 }
 
-.pricing-table-wrapper {
-  overflow-x: auto;
-  border-radius: var(--radius-sm);
+.price-list {
+  list-style: none;
+  margin-top: 0.65rem;
 }
 
-.pricing-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
+.price-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.pricing-table th,
-.pricing-table td {
-  padding: 0.9rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  text-align: left;
+.price-list li:last-child {
+  border-bottom: none;
 }
 
-.pricing-table th {
-  color: var(--accent);
-  font-weight: 600;
+.price-list li span {
+  color: var(--text-dim);
+}
+
+.price-list li strong {
+  color: var(--accent-soft);
+  white-space: nowrap;
+}
+
+.additional-box {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.price-note {
+  margin-top: 0.9rem;
+  color: var(--text-dim);
 }
 
 .site-footer {
