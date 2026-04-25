@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ENLIGHTEN COMMUNITY Service Pricing - Premium Blox Fruits Services"
+    />
+    <title>ENLIGHTEN COMMUNITY | Services</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="ENLIGHTEN COMMUNITY Home">
+          <img src="logo.png" alt="ENLIGHTEN COMMUNITY logo" class="brand-logo" />
+          <span>ENLIGHTEN COMMUNITY</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links" id="primary-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="server.html" class="active">Services</a></li>
+          <li><a href="index.html#join">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section container pricing-hero">
+        <h1 class="section-title glow-text">Service Pricing</h1>
+        <p class="hero-subtitle">Transparent rates for every Blox Fruits package.</p>
+      </section>
+
+      <section class="section container" id="raids-pricing">
+        <h2 class="section-title">Raids Pricing</h2>
+        <div class="pricing-grid">
+          <article class="pricing-card glass">
+            <h3>Easy Raid</h3>
+            <p>Quick completion ideal for beginner awakenings.</p>
+            <strong>$2 / raid</strong>
+          </article>
+          <article class="pricing-card glass">
+            <h3>Advanced Raid</h3>
+            <p>Optimized runs with experienced support.</p>
+            <strong>$4 / raid</strong>
+          </article>
+          <article class="pricing-card glass">
+            <h3>Law Raid</h3>
+            <p>Focused on chip farming and special progression.</p>
+            <strong>$5 / raid</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="grinding-pricing">
+        <h2 class="section-title">Grinding Pricing</h2>
+        <div class="pricing-table-wrapper glass">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Service</th>
+                <th>Details</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Level Grinding</td>
+                <td>1 - 500</td>
+                <td>$15</td>
+              </tr>
+              <tr>
+                <td>Level Grinding</td>
+                <td>500 - 1500</td>
+                <td>$30</td>
+              </tr>
+              <tr>
+                <td>Mastery Farming</td>
+                <td>Up to 400 mastery</td>
+                <td>$12</td>
+              </tr>
+              <tr>
+                <td>Boss Farming</td>
+                <td>Per 10 boss clears</td>
+                <td>$8</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section container" id="special-services">
+        <h2 class="section-title">Special Services</h2>
+        <div class="pricing-grid">
+          <article class="pricing-card glass">
+            <h3>Fruit Awakening Bundle</h3>
+            <p>Full awakening support for your selected fruit.</p>
+            <strong>From $20</strong>
+          </article>
+          <article class="pricing-card glass">
+            <h3>Custom Package</h3>
+            <p>Build your own combination of raids, grinding, and farming.</p>
+            <strong>Contact Us</strong>
+          </article>
+          <article class="pricing-card glass">
+            <h3>Priority Queue</h3>
+            <p>Skip wait time and receive immediate service handling.</p>
+            <strong>+ $5</strong>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="join">
+      <div class="container footer-content">
+        <a href="https://discord.gg/your-invite" target="_blank" rel="noopener">Join our Discord</a>
+        <p>© <span id="year"></span> ENLIGHTEN COMMUNITY. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('#primary-menu');
+      menuToggle?.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
+        navMenu.classList.toggle('open');
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

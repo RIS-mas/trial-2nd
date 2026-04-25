@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ENLIGHTEN COMMUNITY - Premium Blox Fruits Services"
+    />
+    <title>ENLIGHTEN COMMUNITY | Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="ENLIGHTEN COMMUNITY Home">
+          <img src="logo.png" alt="ENLIGHTEN COMMUNITY logo" class="brand-logo" />
+          <span>ENLIGHTEN COMMUNITY</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links" id="primary-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="server.html">Services</a></li>
+          <li><a href="#join">Join</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container" id="home">
+        <div class="hero-content glass">
+          <h1 class="hero-title glow-text">ENLIGHTEN COMMUNITY</h1>
+          <p class="hero-subtitle">Premium Blox Fruits Services</p>
+          <a class="btn-glow" href="https://discord.gg/your-invite" target="_blank" rel="noopener"
+            >Join Discord</a
+          >
+        </div>
+      </section>
+
+      <section class="section container" id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="cards-grid">
+          <article class="service-card glass">
+            <div class="icon" aria-hidden="true">⚔️</div>
+            <h3>Raids</h3>
+            <p>Easy, Advanced, and Law raids completed quickly by trusted helpers.</p>
+          </article>
+          <article class="service-card glass">
+            <div class="icon" aria-hidden="true">📈</div>
+            <h3>Level Grinding</h3>
+            <p>Fast progression support from low level to endgame efficiency.</p>
+          </article>
+          <article class="service-card glass">
+            <div class="icon" aria-hidden="true">🔥</div>
+            <h3>Mastery Farming</h3>
+            <p>Boost weapon and fruit mastery with optimized farming routes.</p>
+          </article>
+          <article class="service-card glass">
+            <div class="icon" aria-hidden="true">💠</div>
+            <h3>Fruit Awakening</h3>
+            <p>Complete awakening tasks with smooth scheduling and secure handling.</p>
+          </article>
+          <article class="service-card glass">
+            <div class="icon" aria-hidden="true">👑</div>
+            <h3>Boss Farming</h3>
+            <p>Reliable boss rotations for drops, rewards, and account progression.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="features">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="features-grid">
+          <div class="feature-item glass">
+            <h3>200+</h3>
+            <p>Vouches</p>
+          </div>
+          <div class="feature-item glass">
+            <h3>Fast &amp; Trusted</h3>
+            <p>Consistent delivery and support</p>
+          </div>
+          <div class="feature-item glass">
+            <h3>Secure Handling</h3>
+            <p>Safe account practices</p>
+          </div>
+          <div class="feature-item glass">
+            <h3>Affordable Pricing</h3>
+            <p>Great value for every package</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="join">
+      <div class="container footer-content">
+        <a href="https://discord.gg/your-invite" target="_blank" rel="noopener">Join our Discord</a>
+        <p>© <span id="year"></span> ENLIGHTEN COMMUNITY. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('#primary-menu');
+      menuToggle?.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!expanded));
+        navMenu.classList.toggle('open');
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
